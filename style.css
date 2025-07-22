@@ -78,3 +78,27 @@ body {
 .button-refresh:hover {
   background-color: #0096c7;
 }
+.route-status {
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 12px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  user-select: none;
+}
+
+.status-open {
+  background-color: #2d6a4f; /* тёмно-зелёный */
+  color: #d8f3dc; /* светло-зелёный текст */
+}
+
+.status-closed {
+  background-color: #b00020; /* тёмно-красный */
+  color: #f8d7da; /* светло-красный текст */
+}
+
+.route-item {
+  position: relative; /* Чтобы статус внутри позиционировался */
+}
