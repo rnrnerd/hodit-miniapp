@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hodit MiniApp</title>
+  <title>Hodit Mini App — Расписание</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <div class="app-container">
-    <div id="route-list"></div>
+    <h2>Расписание катеров</h2>
 
-    <div id="schedule">
-      <p>Выберите маршрут для просмотра расписания</p>
-    </div>
+    <!-- Кнопки маршрутов -->
+    <div id="routes-buttons" class="routes-buttons"></div>
 
-    <button id="refresh-btn">Обновить данные</button>
+    <!-- Расписание -->
+    <section id="schedule" class="schedule">
+      Загрузка расписания...
+    </section>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
