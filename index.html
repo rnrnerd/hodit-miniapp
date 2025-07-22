@@ -2,27 +2,57 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hodit Mini App</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <title>Hodit MiniApp</title>
+  <style>
+    .route-item {
+      cursor: pointer;
+      padding: 6px 10px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .route-item.selected {
+      background-color: #e0f0ff;
+    }
+    .route-icon {
+      font-size: 20px;
+    }
+    .route-status {
+      margin-left: auto;
+      font-weight: bold;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12px;
+      user-select: none;
+    }
+    .status-open {
+      color: #0a7d2f;
+      background: #d4f6d1;
+    }
+    .status-closed {
+      color: #a00a1f;
+      background: #f6d1d4;
+    }
+    #schedule {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #f9f9f9;
+    }
+  </style>
 </head>
 <body>
-  <div class="app-container">
-    <header class="header">
-      <span id="raid-status-icon">❌</span>
-      <span id="raid-status-text">РЕЙД ЗАКРЫТ</span>
-    </header>
 
-    <nav class="route-list" id="route-list">
-      <!-- маршруты добавим из JS -->
-    </nav>
+  <div id="route-list"></div>
 
-    <section class="schedule" id="schedule">
-      <p>Выберите маршрут для просмотра расписания</p>
-    </section>
-
-    <button class="button-refresh" id="refresh-btn">Обновить данные</button>
+  <div id="schedule">
+    <p>Выберите маршрут для просмотра расписания</p>
   </div>
+
+  <button id="refresh-btn">Обновить данные</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
